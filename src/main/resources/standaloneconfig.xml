@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+ http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">
+<!--    Creating an stanadlone list-->
+    <util:list list-class="java.util.LinkedList" id="bestfriends">
+        <value>Aman</value>
+        <value>Naman</value>
+        <value>Ankit</value>
+        <value>Rohit</value>
+
+    </util:list>
+<!--    standalone properties tag-->
+    <util:properties id="dbconfig">
+        <prop key="username">faisal</prop>
+        <prop key="password">fkgakf</prop>
+        <prop key="url">mysql:jdbc://localhost:3396</prop>
+    </util:properties>
+    <bean class="com.stanalone.collection.Person" name="person">
+        <property name="friends" ref="bestfriends"/>
+        <property name="properties" ref="dbconfig"/>
+
+    </bean>
+
+</beans>
