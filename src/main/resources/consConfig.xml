@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="com.springConstructor.constructor.Address" name="cer">
+        <constructor-arg value="Hyderabad" />
+
+    </bean>
+<bean class="com.springConstructor.constructor.Person" name="person1">
+    <constructor-arg value="Faisal"/>
+    <constructor-arg value="124" type="int"/>
+    <constructor-arg ref="cer"/>
+</bean>
+</beans>
