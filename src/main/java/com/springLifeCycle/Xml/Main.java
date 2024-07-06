@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-        /**
+        /*
          * Using abstract application context as it contains the method that is used to call the destroy method of bean life cycle
          */
         AbstractApplicationContext abstractApplicationContext=new ClassPathXmlApplicationContext("LifeCycleXML.xml");
